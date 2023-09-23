@@ -1,0 +1,1209 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - HI
+      - Hello
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: Profil_Rumah_Sakit
+    examples: |
+      - Rumah Sakit Sobirin
+      - Rumah Sakit Dr. Sobirin
+      - RS Sobirin
+      - RS Dr. Sobirin
+      - Profil Rumah Sakit Sobirin
+      - Profil Rumah Sakit Dr. Sobirin
+      - Profil RS Sobirin
+      - Profil RS Dr. Sobirin
+  - intent: Poliklinik
+    examples: |
+      - Poliklinik apa saja yang ada di Rumah Sakit Dr. Sobirin
+      - Poliklinik apa saja yang ada di Rumah Sakit Sobirin
+      - Poliklinik apa saja yang ada di RS Dr. Sobirin
+      - Poliklinik apa saja yang ada di RS Sobirin
+      - Poliklinik
+  - intent: Perawatan_Poli_Mata
+    examples: |
+      - Perawatan Mata
+      - Perawatan apa saja yang ada di Poli Mata
+      - Rawat Mata
+      - Tindakan Perawatan di Poli Mata
+  - intent: Perawatan_Poli_Penyakit_Dalam
+    examples: |
+      - Perawatan Penyakit Dalam
+      - Perawatan apa saja yang ada di Poli Penyakit Dakan
+      - Rawat Penyakit Dalam
+      - Tindakan Perawatan di Poli Penyakit Dalam
+  - intent: Perawatan_Poli_Gigi
+    examples: |
+      - Perawatan Gigi
+      - Perawatan apa saja yang ada di Poli Gigi
+      - Rawat Gigi
+      - Tindakan Perawatan di Poli Gigi
+  - intent: Perawatan_Poli_Jiwa
+    examples: |
+      - Perawatan Jiwa
+      - Perawatan apa saja yang ada di Poli Jiwa
+      - Rawat Jiwa
+      - Tindakan Perawatan di Poli Jiwa
+  - intent: Perawatan_Poli_Anak
+    examples: |
+      - Perawatan Anak
+      - Perawatan apa saja yang ada di Poli Anak
+      - Rawat Anak
+      - Tindakan Perawatan di Poli Anak
+  - intent: Perawatan_Poli_THT
+    examples: |
+      - Perawatan THT
+      - Perawatan apa saja yang ada di Poli THT
+      - Rawat THT
+      - Tindakan Perawatan di Poli THT
+  - intent: Perawatan_Poli_Fisioterapi
+    examples: |
+      - Perawatan Fisioterapi
+      - Perawatan apa saja yang ada di Poli Fisioterapi
+      - Rawat Fisioterapi
+      - Tindakan Perawatan di Poli Fisioterapi
+  - intent: Check_Perawatan_Mata
+    examples: |
+      - Apakah ada perawatan mata [check kondisi](Perawatan_Mata)?
+      - Apakah perawatan mata [iritasi](Perawatan_Mata) tersedia?
+      - Penanganan untuk [katarak](Perawatan_Mata) apakah ada?
+      - Apakah di rumah sakit ini bisa melakukan [Lasik](Perawatan_Mata)?
+  - intent: Ruangan_Rawat_Inap
+    examples: |
+      - Ruangan Rawat Inap
+      - Ruangan_Rawat_Inap yang ada di Rumah Sakit Dr. Sobirin
+      - Ruangan_Rawat_Inap yang ada di Rumah Sakit Sobirin
+      - Ruangan_Rawat_Inap yang ada di RS Dr. Sobirin
+  - intent: Berkas_Pendaftaran
+    examples: |
+      - Berkas Pendaftaran
+      - Syarat pendaftaran
+      - Daftar
+  - intent: Check_Obat
+    examples: |
+      - Apakah ada obat [paracetamol](Obat) ?
+      - Apakah obat [panadol](Obat) tersedia ?
+      - Obat [trimenza](Obat) ?
+      - apakah ada obat [azilsartan](Obat)?
+      - Apakah ada obat [acarbose](Obat)?
+      - Apakah ada obat [abacavir](Obat)?
+  - intent: Check_Penyakit_Dalam
+    examples: |
+      - Apakah ada penanganan penyakit dalam [Alergi Imunologi](Penyakit_Dalam)?
+      - Apakah penanganan [Gastroenterohepatologi](Penyakit_Dalam) tersedia?
+      - Penanganan penyakit dalam berupa [Kardiologi](Penyakit_Dalam) apakah ada?
+  - intent: Check_Gigi
+    examples: |
+      - Apakah bisa [Cabut Gigi](Gigi) di rumah sakit ini?
+      - Apakah penanganan [Implan Gigi](Gigi) tersedia?
+      - Penanganan [Pembersihan Gigi](Gigi) apakah ada?
+      - Apakah bisa [cabut gigi](Gigi) di rumah sakit ini?
+      - apakah bisa [implan gigi](Gigi) di rumah sakit ini?
+      - Penanganan [cabut gigi](Gigi) apakah ada?
+      - Penanganan [beli gigi](Gigi) apakah ada ?
+  - intent: Radiologi
+    examples: |
+      - Apa saja pelayanan radiologi yang tersedia di Rumah Sakit Dr. Sobirin?
+      - Apa saja pelayanan radiologi yang ada di Rumah Sakit Dr. Sobirin?
+      - Pelayanan radiologi apa saja yang ada di Rumah Sakit Sobirin
+      - Pelayanan radiologi apa saja yang ada di RS Dr. Sobirin
+      - Pelayanan radiologi apa saja yang ada di RS Sobirin
+      - Pelayanan radiologi yang ada di Rumah Sakit Sobirin
+      - Pelayanan radiologi yang tersedia
+      - Pelayanan radiologi
+  - intent: Laboratorium
+    examples: |
+      - Apa saja pelayanan laboratorium yang tersedia di Rumah Sakit Dr. Sobirin?
+      - Apa saja pelayanan laboratorium yang ada di Rumah Sakit Dr. Sobirin?
+      - Pelayanan laboratorium apa saja yang ada di Rumah Sakit Sobirin
+      - Pelayanan laboratorium apa saja yang ada di RS Dr. Sobirin
+      - Pelayanan laboratorium apa saja yang ada di RS Sobirin
+      - Pelayanan laboratorium yang ada di Rumah Sakit Sobirin
+      - Pelayanan laboratorium yang tersedia
+      - Pelayanan laboratorium
+  - intent: Check_Jiwa
+    examples: |
+      - Apakah bisa [Konsultasi kesehatan jiwa](Jiwa) di rumah sakit ini?
+      - Apakah ada layanan penanganan berupa [depresi](Jiwa)?
+      - Apakah di rumah sakit ini bisa menangani kondisi [Skizofrenia](Jiwa)?
+      - Tersedia tidak pelayanan untuk [Autisme](Jiwa)?
+  - intent: Check_THT
+    examples: |
+      - Apakah ada penanganan untuk [Gangguan Pendengaran](THT) di rumah sakit ini?
+      - Apakah ada layanan penanganan [Sinusitis](THT)?
+      - Apakah di rumah sakit ini bisa menangani [Amandel](THT)?
+      - Tersedia tidak pelayanan untuk [Laringitis](THT)?
+  - intent: Check_Anak
+    examples: |
+      - Apakah bisa evaluasi [Perkembangan](Anak) anak di rumah sakit ini?
+      - Apakah ada penanganan untuk [Penyakit Anak](Anak) di rumah sakit ini?
+      - Apakah bisa [Imunisasi](Anak) untuk anak di rumah sakit ini?
+      - Bisakah menangani [Infeksi](Anak) pada anak di rumah sakit ini?
+  - intent: Check_Fisioterapi
+    examples: |
+      - Apakah bisa [Fisioterapi paket 2 alat](Fisioterapi) di rumah sakit ini?
+      - Apakah ada penanganan untuk [Fisioterapi IR](Fisioterapi) di rumah sakit ini?
+      - Apakah bisa [Fisioterapi pribadi](Fisioterapi) untuk anak di rumah sakit ini?
+      - Bisakah menggunakan [Fisioterapi paket 3 alat](Fisioterapi) di rumah sakit ini?
+      - Apakah ada terapi untuk [Gangguan otot](Fisioterapi) di rumah sakit ini?
+      - Apakah ada terapi [mati otot](Fisioterapi) di rumah sakit ini?
+      - Apakah ada penanganan [Fisioterapi IR](Fisioterapi) di rumah sakit ini?
+  - lookup: Nama_Obat
+    examples: |
+      - abacavir
+      - acarbose
+      - ace Inhibitor
+      - acebutolol
+      - acetazolamide
+      - acetylcysteine
+      - acitretin
+      - aclidinium
+      - actemra
+      - actifed
+      - acyclovir Tablet
+      - acyclovir Topikal
+      - adalimumab
+      - adapalene
+      - adefovir
+      - adem Sari
+      - adenosine
+      - agonis Beta
+      - albendazole
+      - albumin
+      - alendronate
+      - alfentanil
+      - alfuzosin
+      - aliskiren
+      - alitretinoin
+      - allopurinol
+      - allylestrenol
+      - alpha-Lipoic Acid
+      - alprazolam
+      - alteplase
+      - aluminium Hidroksida
+      - ambroxol
+      - ambroxol Indofarma
+      - amfetamin
+      - amikacin
+      - amil Nitrit
+      - amiloride
+      - aminofilin
+      - aminoglikosida
+      - aminolevulinic Acid
+      - amiodarone
+      - amitriptyline
+      - amlodipine
+      - amlodipine Hexpharm
+      - amobarbital
+      - amonium Klorida
+      - amoxicillin
+      - amoxicillin Indofarma/Kimia Farma
+      - amoxillin
+      - amphotericin B
+      - ampicillin
+      - amylmetacresol
+      - anagrelide
+      - anakinra
+      - analgetik-Antipiretik
+      - anastrozole
+      - anidulafungin
+      - antagonis H2
+      - antagonis Kalsium
+      - antangin
+      - antasida
+      - antiansietas
+      - antiaritmia
+      - antibiotik
+      - antibiotik Polipeptida
+      - antidepresan
+      - antidepresan Trisiklik
+      - antihistamin
+      - antijamur
+      - antikoagulan
+      - antikolinergik
+      - antikonvulsan
+      - antimania
+      - antiplatelet
+      - antipsikotik
+      - antitetanus
+      - apixaban
+      - ARB
+      - arginine
+      - aripiprazole
+      - asam Alginat
+      - asam Azaleat
+      - asam Borat Tetes Telinga
+      - asam fusidat
+      - asam Glikolat
+      - asam Mefenamat
+      - asam Pipemidat
+      - asam Salisilat
+      - asam Traneksamat
+      - asam Ursodeoksikolat
+      - asam Valproat
+      - asenapine
+      - asetilkolin
+      - aspirin
+      - astaxanthin
+      - astemizole
+      - atenolol
+      - atorvastatin
+      - atropin
+      - attapulgite
+      - avifavir
+      - avigan
+      - azathioprine
+      - azilsartan Medoxomil
+      - azithromycin
+      - baby&Me Organic
+      - bacitracin
+      - baclofen
+      - baloxavir Marboxil
+      - barbiturat
+      - baricitinib
+      - basiliximab
+      - batugin
+      - bebelac Gold Soya
+      - benazepril
+      - benzalkonium Chloride
+      - benzodiazepine
+      - benzoyl Peroxide
+      - betadine
+      - betahistine
+      - betametason
+      - betametason Topikal
+      - betaxolol
+      - bethanechol
+      - bexarotene
+      - biapenem
+      - bilberry
+      - bile Acid Sequestrant
+      - biotin
+      - bisacodyl
+      - bisfosfonat
+      - bismuth Subsalicylate
+      - bisolvon
+      - bisoprolol
+      - bleomycin
+      - bodrex
+      - boron
+      - bortezomib
+      - botox
+      - brodalumab
+      - bromelain
+      - bromhexine
+      - bromocriptine
+      - brompheniramine
+      - bronkodilator
+      - budesonide
+      - bupivacaine
+      - buprenorphine
+      - bupropion
+      - busulfan
+      - butabarbital
+      - butalbital
+      - butorphanol
+      - caladine Lotion
+      - calcitriol
+      - calcium D Redoxon (CDR)
+      - callusol
+      - canakinumab
+      - candesartan
+      - canesten
+      - capecitabine
+      - captopril
+      - carbamazepine
+      - carbapenem
+      - carbidopa
+      - carbimazole
+      - carboplatin
+      - carvedilol
+      - cataflam
+      - cefaclor
+      - cefadroxil
+      - cefazolin
+      - cefdinir
+      - cefepime
+      - cefixime
+      - cefoperazone
+      - cefoperazone-Sulbactam
+      - cefotaxim
+      - cefpirome
+      - cefpodoxime
+      - cefprozil
+      - ceftaroline Fosamil
+      - ceftazidime
+      - ceftizoxime
+      - ceftriaxone
+      - cefuroxime
+      - celecoxib
+      - cephalexin
+      - cerebrovit
+      - certolizumab
+      - cetirizine
+      - chlorambucil
+      - chloramphenicol
+      - chlordiazepoxide-Clidinium
+      - chlorhexidine
+      - chlorpheniramine
+      - chlorpromazine
+      - chlorzoxazone
+      - cholestyramine
+      - ciclopirox
+      - ciclosporin
+      - cilostazol
+      - cimetidine
+      - ciprofloxacin
+      - cisapride
+      - cisplatin
+      - citicolin
+      - clarithromycin
+      - clebopride
+      - clenbuterol
+      - clindamycin
+      - clobazam
+      - clobetasol
+      - clocortolone
+      - clodronate
+      - clomifene
+      - clomipramine
+      - clonazepam
+      - clonidine
+      - clopidogrel
+      - clotrimazole
+      - clozapine
+      - codeine
+      - coenzyme Q10
+      - colchicine
+      - colesevelam
+      - colestipol
+      - colistincombantrin
+      - combivent
+      - cortisone
+      - counterpain
+      - COX-2 Inhibitor
+      - cyclophosphamide
+      - cyproheptadine
+      - cabigatran
+      - caclatasvir
+      - daktarin
+      - danazol
+      - dapagliflozin
+      - dapsone
+      - darifenacin
+      - darunavir
+      - daun Ungu
+      - decitabine
+      - decolgen
+      - deferasirox
+      - deferiprone
+      - degirol
+      - dekongestan
+      - demeclocycline
+      - dermatix
+      - desloratadine
+      - desoximetasone
+      - dexamethasone
+      - dexamethasone Harsen/Holi
+      - dexanta
+      - dexketoprofen
+      - dexlansoprazole
+      - dexteem Plus
+      - dextromethorphan
+      - dextrose
+      - diapet
+      - diazepam
+      - diclofenac
+      - diethylcarbamazine
+      - digoxin
+      - diltiazem
+      - dimenhydrinate
+      - dimethicone
+      - dimethindene Maleate
+      - diphenhydramine
+      - dipyridamole
+      - disulfiram
+      - diuretik
+      - diuretik Hemat Kalium
+      - dobutamin
+      - docetaxel
+      - docosahexaenoic Acid (DHA)
+      - docusate
+      - dofetilide
+      - domperidone
+      - donepezil
+      - dopamin
+      - doripenem
+      - oxazosin
+      - doxepine
+      - doxorubicin
+      - doxycycline
+      - dulcolax
+      - duloxetine
+      - dumolid
+      - dydrogesterone
+      - dkspektoran
+      - EM Kapsul
+      - emtricitabine-Tenofovir
+      - enalapril
+      - enervon C
+      - enoxaparin
+      - entacapone
+      - entecavir
+      - entrostop
+      - enzalutamide
+      - eperisone
+      - ephedrine Tetes Hidung
+      - epinephrine
+      - epirubicin
+      - eplerenone
+      - epoetin Alfa
+      - epoetin Beta
+      - eprosartan
+      - eptifibatide
+      - erdosteine
+      - ergotamine
+      - ertapenem
+      - erythromycin
+      - escitalopram
+      - eEsmolol
+      - esomeprazole
+      - estazolam
+      - estradiol
+      - estriol
+      - estrogen
+      - etanercept
+      - ethambutol
+      - etodolac
+      - etoposide
+      - etoricoxib
+      - etravirine
+      - everolimus
+      - exemestane
+      - famciclovir
+      - famotidine
+      - favipiravir
+      - felodipine
+      - feminax
+      - fenilbutazon
+      - fenofibrate
+      - fentanyl
+      - fexofenadine
+      - FG Troches
+      - fibrinogen
+      - filgrastim
+      - finasteride
+      - fingolimod
+      - flavoxate
+      - fluconazole
+      - flunarizin
+      - fluocinolone
+      - fluoxetine
+      - luphenazine
+      - fluticasone
+      - fluvoxamine
+      - folavit
+      - fondaparinux
+      - formalin
+      - formoterol
+      - fosinopril
+      - fucoidan
+      - fungiderm
+      - furosemide
+      - gabapentin
+      - galantamine
+      - gallium Nitrate
+      - ganciclovir
+      - gatifloxacin Tetes Mata
+      - gefitinib
+      - gemcitabine
+      - gemfibrozil
+      - gentamicin
+      - ginkgo Biloba
+      - glibenclamide
+      - gliclazide
+      - glimepiride
+      - gliquidone
+      - gliserol
+      - gliserol Topikal
+      - glukagon
+      - glycopyrronium
+      - golimumab
+      - goserelin
+      - granisetron
+      - griseofulvin
+      - guaifenesin
+      - H-Booster
+      - haloperidol
+      - halothane
+      - heparin
+      - heptaminol
+      - holisticare Ester C
+      - hufagripp
+      - hufavicee
+      - human Chorionic Gonadotropin (HCG)
+      - hydrochlorothiazide
+      - hydrocodone
+      - hydrocortisone
+      - hydromorphone
+      - hydroquinone
+      - hydrotalcite
+      - hydroxychloroquine
+      - hydroxyzine
+      - hyoscine Butylbromide
+      - hyoscine Hydrobromide
+      - ibandronate
+      - ibuprofen
+      - ifosfamide
+      - iliadin
+      - imatinib
+      - imboost
+      - imipenem-Cilastatin
+      - imipramine
+      - incidal-OD
+      - indacaterol
+      - indapamide
+      - indinavir
+      - indomethacin
+      - indoramin
+      - infliximab
+      - insto
+      - insulin Suntik
+      - interferon
+      - interferon Alfa-2a
+      - interferon Alfa-2b
+      - interferon alfa-n3
+      - interferon Beta-1a
+      - interferon Beta-1b
+      - interferon Gamma-1b
+      - ipratropium
+      - irbesartan
+      - irinotecan
+      - isocarboxazid
+      - isoniazid
+      - isosorbid Mononitrat
+      - isosorbide Dinitrate
+      - isotretinoin
+      - isoxsuprine
+      - isradipine
+      - itraconazole
+      - ivabradine
+      - ivermectin
+      - IVIG
+      - kafein
+      - kalium
+      - kalpanax
+      - kalsium
+      - kalsium Asetat
+      - kalsium Glukonat
+      - kalsium Karbonat
+      - kanamycin
+      - karbon Aktif
+      - kejibeling
+      - ketamine
+      - ketoconazole
+      - ketoprofen
+      - ketorolac
+      - ketotifen
+      - kina
+      - kiranti
+      - klorokuin
+      - komix
+      - kortikosteroid
+      - kotrimoksazol
+      - L-Alanyl-L-Glutamine
+      - labetalol
+      - lacto-B
+      - lactobacillus Acidophilus
+      - laktulosa
+      - lamivudine
+      - lamotrigine
+      - lancid
+      - lanolin
+      - lansoprazole
+      - lapatinib
+      - latanoprost
+      - leflunomide
+      - lenalidomide
+      - letrozole
+      - leucovorin
+      - levetiracetam
+      - levocetirizine
+      - levodopa
+      - levofloxacin
+      - levonorgestrel Kontrasepsi Darurat
+      - levothyroxine
+      - lidocaine
+      - linagliptin
+      - lLincomycin
+      - linezolid
+      - liothyronine
+      - lisinopril
+      - lithium
+      - loperamide
+      - loratadine
+      - lorazepam
+      - losartan
+      - lovastatin
+      - lutein
+      - lynestrenol
+      - lysine dan Asam Amino Esensial Oral
+      - macrogol
+      - magnesium Hidroksida
+      - magnesium Sitrat
+      - magnesium Sulfat (MgSO4)
+      - makrolid
+      - manitol
+      - MAOI
+      - maprotiline
+      - mebendazole
+      - mebhydrolin
+      - medi-Klin
+      - melanox
+      - meloxicam
+      - memantine
+      - meniran Hijau
+      - meropenem
+      - mesterolone
+      - metamfetamin
+      - metamizole
+      - metformin
+      - methadone
+      - methimazole
+      - methisoprinol
+      - methotrexate
+      - methylcellulose
+      - methylcobalamin
+      - methylergometrine
+      - methylphenidate
+      - methylprednisolone
+      - metil Salisilat
+      - metildopa
+      - metoclopramide
+      - metoprolol
+      - metronidazole
+      - micafungin
+      - miconazole
+      - microgynon
+      - microlax
+      - midazolam
+      - migran Konimex
+      - minocycline
+      - minoxidil
+      - mirtazapine
+      - misoprostol
+      - mivacurium
+      - mixagrip
+      - modafinil
+      - moexipril
+      - mometasone Furoate
+      - morfin
+      - moxifloxacin
+      - mupirocin
+      - muscle Relaxant
+      - mycophenolate Mofetil
+      - mycophenolate Sodium
+      - mylanta
+      - nabumetone
+      - nadolol
+      - nadroparin
+      - naftifine
+      - nalbuphine
+      - nalgestan
+      - naproxen
+      - natrium Bikarbonat
+      - natrium Picosulfat
+      - natur-E
+      - nebivolol
+      - neo Rheumacyl
+      - neocate Junior
+      - neomycin
+      - neostigmine
+      - neurobion
+      - nevirapine
+      - new Diatabs
+      - nicardipine
+      - nicotinamide
+      - nifedipine
+      - nifuroxazide
+      - nilotinib
+      - nimodipine
+      - nitrofurantoin
+      - nitrogen Oksida
+      - nitrogliserin
+      - nizatidine
+      - nonsteroidal Anti-inflammatory Drugs (NSAID)
+      - norepinephrine
+      - norethisterone
+      - norfloxacin
+      - norit
+      - noscapine
+      - nusinersen
+      - nutribaby Royal 1
+      - nutribaby Royal 2
+      - nutrilon Royal Prosyneo
+      - NUVO Hand Sanitizer dan Hand Soap
+      - nystatin
+      - obat Antihipertensi
+      - obat Antivirus
+      - obat Digestan
+      - obat Golongan Tetracycline
+      - obat Imunosupresan
+      - obat Pencahar
+      - octreotide
+      - ofloxacin
+      - oksitosin
+      - olanzapine
+      - olmesartan
+      - olodaterol
+      - omalizumab
+      - omeprazole
+      - ondansetron
+      - oralit
+      - orlistat
+      - oseltamivir
+      - oskadon
+      - oxacillin
+      - oxcarbazepine
+      - oxomemazine
+      - oxycodone
+      - oxymetazoline
+      - oxytetracycline
+      - paclitaxel
+      - paliperidone
+      - panadol
+      - pancuronium
+      - pantoprazole
+      - papaverine
+      - paracetamol
+      - paraldehyde
+      - paramex
+      - parasol
+      - paricalcitol
+      - paromomycin
+      - pegfilgrastim
+      - peginterferon alfa-2a
+      - peginterferon Alfa-2b
+      - pektin
+      - penciclovir
+      - penghambat Adrenergik
+      - penghambat Alfa
+      - penghambat Beta
+      - penghambat Pompa Proton
+      - penghambat Protein Kinase
+      - penicillin G Procaine
+      - penicillin VK
+      - penisilin
+      - pentobarbital
+      - perindopril
+      - permethrin
+      - perphenazine
+      - petrolatum
+      - phenazopyridine
+      - phenelzine
+      - phenobarbital
+      - phenothiazine
+      - phenylephrine
+      - phenylpropanolamine
+      - phenytoin
+      - pil KB
+      - pilocarpine
+      - pimozide
+      - pioglitazone
+      - piracetam
+      - pirocam
+      - piroxicam
+      - policresulen
+      - polycarbophil
+      - polymyxin B
+      - polysilane
+      - pomalidomide
+      - ponstan
+      - povidone Iodine
+      - prasugrel
+      - praziquantel
+      - prazosin
+      - prednisolone
+      - prednison
+      - pregabalin
+      - prilocaine
+      - primaquine
+      - primidone
+      - probenecid
+      - probiotik
+      - procainamide
+      - procaterol Hcl
+      - prochlorperazine
+      - progesteron
+      - promag
+      - promethazine
+      - propafenone
+      - propofol
+      - propranolol
+      - propylthiouracil
+      - pseudoephedrine
+      - psyllium
+      - PUREGROW Organic
+      - pyrazinamide
+      - pyridoxine
+      - pyrimethamine
+      - quetiapine
+      - quinapril
+      - quinidine
+      - quinolone
+      - rabeprazole
+      - radium
+      - raloxifen
+      - ramipril
+      - ranitidin
+      - redoxon
+      - remdesivir
+      - remifentanil
+      - repaglinide
+      - reserpine
+      - retinoid
+      - rhinos SR
+      - rho
+      - riboflavin
+      - rifampicin
+      - rilpivirine
+      - riluzole
+      - risedronate
+      - risperidone
+      - rituximab
+      - rivaroxaban
+      - rivastigmine
+      - ropinirole
+      - rosuvastatin
+      - saccharomyces
+      - sakatonik Liver
+      - salbutamol
+      - salmeterol
+      - salonpas
+      - sangobion
+      - sangobion Femine
+      - sanmol
+      - scopolamine
+      - scott’s Emulsion
+      - secobarbital
+      - sefalosporin
+      - selective Serotonin Reuptake Inhibitors (SSRIs)
+      - selegiline
+      - senna
+      - sertraline
+      - sevelamer
+      - SGM Eksplor Soya Pro-gress Maxx dengan Iron C
+      - sildenafil
+      - simeprevir
+      - simethicone
+      - simvastatin
+      - sirolimus
+      - sodium Biphosphate (Sodium Phosphate)
+      - sodium Divalproex
+      - sofosbuvir
+      - sorafenib
+      - sotalol
+      - sparfloxacin
+      - spiramycin
+      - spironolactone
+      - squalene
+      - stavudine
+      - stimuno Anak
+      - strepsils
+      - streptokinase
+      - streptomycin
+      - strontium
+      - sufentanil
+      - sukralfat
+      - sulfadiazine
+      - sulfamethoxazole
+      - sulfanilamide
+      - sulfasalazine
+      - sulfonamida
+      - sulfonilurea
+      - sumagesic
+      - sumatriptan
+      - sunitinib
+      - super Tetra
+      - suxamethonium
+      - tacrine
+      - tacrolimus
+      - tadalafil
+      - tamoxifen
+      - tamsulosin
+      - tapentadol
+      - telbivudine
+      - telmisartan
+      - telon Lang
+      - temazepam
+      - tembaga
+      - tempra
+      - teofilin
+      - terapi Penggantian Hormon
+      - terazosin
+      - terbinafine
+      - terbutaline
+      - terfenadine
+      - terramycin
+      - testosterone
+      - tetracycline Hcl
+      - thalidomide
+      - thiamphenicol
+      - thioguanine
+      - thiopental
+      - tiabendazole
+      - ticagrelor
+      - ticlopidine
+      - tigecycline
+      - timolol
+      - tioconazole
+      - tiotropium
+      - tirofiban
+      - tizanidine
+      - tobramycin
+      - tocilizumab
+      - tolak Angin
+      - tolnaftate
+      - tolterodine
+      - topiramate
+      - torasemide
+      - tramadol
+      - trandolapril
+      - tranylcypromine
+      - tretinoin Oral
+      - tretinoin Topikal
+      - triamcinolone
+      - triamcinolone Semprot Hidung
+      - triclabendazole
+      - triclosan
+      - trifluoperazine
+      - triflusal
+      - trihexyphenidyl
+      - trimetazidine
+      - trimethoprim
+      - triprolidine
+      - tripsin
+      - ulipristal
+      - vaksin AstraZeneca
+      - vaksin BCG
+      - vaksin Campak
+      - vaksin Cansino
+      - vaksin DPT
+      - vaksin Hepatitis B
+      - vaksin HPV
+      - vaksin Influenza
+      - vaksin Johnson & Johnson
+      - vaksin Moderna
+      - vaksin MR
+      - vaksin Novavax
+      - vaksin Pfizer
+      - vaksin Polio
+      - vaksin Rotavirus
+      - vaksin Sinopharm
+      - vaksin Sinovac
+      - vaksin Sputnik
+      - vaksin Tifus
+      - valacyclovir
+      - valganciclovir
+      - valsartan
+      - vancomycin
+      - vardenafil
+      - varian Produk SGM Eksplor Pro-gress Maxx dengan IronC
+      - vasodilator
+      - vasopressin
+      - vecuronium
+      - vegeta Herbal
+      - velpatasvir-Sofosbuvir
+      - venlafaxine
+      - verapamil
+      - verile
+      - viagra
+      - vinblastin
+      - vincristine
+      - vinorelbine
+      - vitacimin
+      - vitamin A
+      - vitamin B1
+      - vitamin B12
+      - vitamin B2
+      - vitamin B3 (Niacin)
+      - vitamin B5
+      - vitamin B6
+      - vitamin B9 (Asam Folat)
+      - vitamin C
+      - vitamin D
+      - vitamin D3
+      - vitamin E
+      - vitamin K
+      - voltadex
+      - voltaren
+      - voriconazole
+      - warfarin
+      - wheat Dextrin
+      - xanax
+      - zanamivir
+      - zat Besi
+      - zidovudine
+      - zinc Sulphate
+      - zoledronic Acid
+      - zolpidem
+  - lookup: Nama_Perawatan_Mata
+    examples: |
+      - check kondisi
+      - iritasi
+      - operasi mata
+      - Infeksi Mata Luar
+      - Katarak
+      - Oftalmologi Anak
+      - Glaukoma
+      - Refraksi
+      - Retina dan vitreus
+      - Trauma dan Okuloplasti
+      - Tumor Mata
+      - Neurooftalmolog
+  - lookup: Nama_Penyakit_Dalam
+    examples: |
+      - Alergi Imunologi
+      - Gastroenterohepatologi
+      - Kardiologi
+      - Tropik Infeksi
+      - Reumatologi
+      - Pulmonologi
+      - Psikosomatik
+      - Metabolik Endokrin
+      - Hematologi Onkologi Medik
+      - Ginjal Hipertensi
+      - Geriatri
+  - lookup: Nama_Penanganan_Gigi
+    examples: |
+      - Pembersihan Gigi
+      - Sealant pada Celah Gigi
+      - Tambal Gigi
+      - Endodontik
+      - Cabut Gigi
+      - Perawatan Gigi Palsu
+      - Implan Gigi
+      - Crown Gigi
+  - lookup: Nama_Jiwa
+    examples: |
+      - Penanganan Medis Jiwa
+      - Psikotik
+      - Skizofrenia
+      - Depresi
+      - Kecemasan
+      - Autisme
+      - Hiperaktif
+      - Konsultasi Kesehatan Jiwa
+      - Penilaian Kesehatan Jiwa
+  - lookup: Nama_THT
+    examples: |
+      - Penanganan Medis THT
+      - Gangguan Pendengaran
+      - Gangguan Keseimbangan
+      - Telinga Berdengengung
+      - Tumor THT
+      - Kanker THT
+      - Alergi hidung
+      - Sinusitis
+      - Hidung tersumbat
+      - Amandel
+      - Laringitis
+      - tonsilitis
+      - Sulit menelan
+  - lookup: Nama_Anak
+    examples: |
+      - Pertumbuhan
+      - Perkembangan
+      - Monitoring Kondisi bayi
+      - Infeksi
+      - Imunisasi
+      - Penyakit Anak
+  - lookup: Nama_Fisioterapi
+    examples: |
+      - Fisioterapi paket 2 alat
+      - Fisioterapi IR
+      - Melatih otot
+      - Gangguan otot
+      - Kelumpuhan

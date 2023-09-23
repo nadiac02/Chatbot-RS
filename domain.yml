@@ -1,0 +1,218 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- Profil_Rumah_Sakit:
+    use_entities: true
+- Poliklinik:
+    use_entities: true
+- Ruangan_Rawat_Inap:
+    use_entities: true
+- Perawatan_Poli_Mata:
+    use_entities: true
+- Perawatan_Poli_Gigi:
+    use_entities: true
+- Perawatan_Poli_Penyakit_Dalam:
+    use_entities: true
+- Perawatan_Poli_Jiwa:
+    use_entities: true
+- Perawatan_Poli_Anak:
+    use_entities: true
+- Perawatan_Poli_THT:
+    use_entities: true
+- Perawatan_Poli_Fisioterapi:
+    use_entities: true
+- Check_Obat:
+    use_entities: true
+- Check_Perawatan_Mata:
+    use_entities: true
+- Check_Penyakit_Dalam:
+    use_entities: true
+- Check_Gigi:
+    use_entities: true
+- Radiologi:
+    use_entities: true
+- Laboratorium:
+    use_entities: true
+- Berkas_Pendaftaran:
+    use_entities: true
+- Check_Jiwa:
+    use_entities: true
+- Check_THT:
+    use_entities: true
+- Check_Anak:
+    use_entities: true
+- Check_Fisioterapi:
+    use_entities: true
+entities:
+- Obat
+- Perawatan_Mata
+- Penyakit_Dalam
+- Gigi
+- Jiwa
+- THT
+- Anak
+- Fisioterapi
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_Profil_Rumah_Sakit:
+  - text: Rumah Sakit Dr. Sobirin Kabupaten Musi Rawas adalah salah satu rumah sakit tipe C dengan tingkat akreditasi paripurna yang beroperasi di Jalan Yos Sudarso No. 13 Pasar Pemiri Kota Lubuklinggau. Rumah sakit ini memiliki visi Rumah Sakit dengan pelayanan prima dan berkeadilan
+  utter_Poliklinik:
+  - text: |-
+      1. Poliklinik Mata
+      2. Poliklinik THT 
+      3. Poliklinik Jiwa 
+      4. Poliklinik Bedah 
+      5. Poliklinik Gigi 
+      6. Poliklinik Penyakit Dalam 
+      7. Poliklinik Fisioterapi 
+      8. Poliklinik Kulit 
+      9. Poliklinik Medical Check Up 
+      10. Poliklinik Gizi  
+      11. Poliklinik Anak
+  utter_Ruangan_Rawat_Inap:
+  - text: |-
+      1. Ruang Asoka 
+      2. Ruang Melati 
+      3. Ruang Nusa Indah 
+      4. Ruang Anggrek 
+      5. Ruang VIP
+  utter_Perawatan_Poli_Mata:
+  - text: |-
+      1. check kondisi
+      2. iritasi
+      3. operasi mata
+      4. Infeksi Mata Luar
+      5. Katarak
+      6. Oftalmologi Anak
+      7. Glaukoma
+      8. Refraksi
+      9. Retina dan vitreus
+      10. Trauma dan Okuloplasti
+      11. Tumor Mata
+      12. Neurooftalmolog
+  utter_Perawatan_Poli_Gigi:
+  - text: |-
+      1. Pembersihan Gigi
+      2. Sealant pada Celah Gigi
+      3. Tambal Gigi
+      4. Endodontik
+      5. Cabut Gigi
+      6. Perawatan Gigi Palsu
+      7. Implan Gigi
+      8. Crown Gigi
+  utter_Perawatan_Poli_Jiwa:
+  - text: |-
+      1. Penanganan Medis Jiwa
+      2. Psikotik
+      3. Skizofrenia
+      4. Depresi
+      5. Kecemasan
+      6. Autisme
+      7. Hiperaktif
+      8. Konsultasi Kesehatan Jiwa
+      9. Penilaian Kesehatan Jiwa
+  utter_Perawatan_Poli_Penyakit_Dalam:
+  - text: |-
+      1. Alergi Imunologi
+      2. Gastroenterohepatologi
+      3. Kardiologi
+      4. Tropik Infeksi
+      5. Reumatologi
+      6. Pulmonologi
+      7. Psikosomatik
+      8. Metabolik Endokrin
+      9. Hematologi Onkologi Medik
+      10. Ginjal Hipertensi
+      11. Geriatri
+  utter_Perawatan_Poli_Anak:
+  - text: |-
+      1. Evaluasi Perkembangan Anak
+      2. Evaluasi Pertumbuhan Anak
+      3. Evaluasi Perkembangan Anak
+      4. Monitoring Kondisi bayi
+      5. Infeksi
+      6. Imunisasi
+      7. Penyakit Anak
+  utter_Perawatan_Poli_THT:
+  - text: |-
+      1. Penanganan Medis THT
+      2. Gangguan Pendengaran
+      3. Gangguan Keseimbangan
+      4. Telinga Berdengengung
+      5. Tumor THT
+      6. Kanker THT
+      7. Alergi hidung
+      8. Sinusitis
+      9. Hidung tersumbat
+      10. Amandel
+      11. Laringitis
+      12. tonsilitis
+      13. Sulit menelan
+  utter_Perawatan_Poli_Fisioterapi:
+  - text: |-
+      1. Fisioterapi paket 2 alat
+      2. Fisioterapi IR
+      3. Gangguan otot
+      4. Melatih otot
+      5. Kelumpuhan
+  utter_Berkas_Pendaftaran:
+  - text: Berkas yang dibutuhkan untuk para pasien mendaftar adalah KTP, BPJS atau ASKES
+  utter_Radiologi:
+  - text: |-
+      1. Rontgen Thorak 
+      2. Rontgen Cranium/Lumbal 
+      3. CT Scan Kepala Kontras 
+      4. CT Scan Kepala Non Kontras 
+      5. USG Abdomrn
+  utter_Laboratorium:
+  - text: |-
+      1. Swab PCR 
+      2. Swab Antigen 
+      3. Darah Lengkap 
+      4. Golongan Darah 
+      5. PST 
+      6. BSN/BSPP 
+      7. Urin Lengkap 
+      8. BTA
+actions:
+- action_check_obat
+- action_check_perawatan_mata
+- action_check_gigi
+- action_check_penyakit_dalam
+- action_check_jiwa
+- action_check_THT
+- action_check_anak
+- action_check_fisioterapi
+forms: {}
+e2e_actions: []

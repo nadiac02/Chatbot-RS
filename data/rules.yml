@@ -1,0 +1,87 @@
+version: "2.0"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Profil Rumah Sakit
+    steps:
+      - intent: Profil_Rumah_Sakit
+      - action: utter_Profil_Rumah_Sakit
+
+  - rule: Poliklinik
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+
+  - rule: Ruangan Rawat Inap
+    steps:
+      - intent: Ruangan_Rawat_Inap
+      - action: utter_Ruangan_Rawat_Inap
+
+  - rule: Radiologi
+    steps:
+      - intent: Radiologi
+      - action: utter_Radiologi
+
+  - rule: Laboratorium
+    steps:
+      - intent: Laboratorium
+      - action: utter_Laboratorium
+
+  - rule: Perawatan Mata
+    steps:
+      - intent: Perawatan_Poli_Mata
+      - action: utter_Perawatan_Poli_Mata
+
+  - rule: Check Obat
+    steps:
+      - intent: Check_Obat
+      - action: action_check_obat
+
+  - rule: Check Perawatan Mata
+    steps:
+      - intent: Check_Perawatan_Mata
+      - action: action_check_perawatan_mata
+
+  - rule: Check Penyakit Dalam
+    steps:
+      - intent: Check_Penyakit_Dalam
+      - action: action_check_penyakit_dalam
+
+  - rule: Check Perawatan Gigi
+    steps:
+      - intent: Check_Gigi
+      - action: action_check_gigi
+
+  - rule: Check Perawatan Jiwa
+    steps:
+      - intent: Check_Jiwa
+      - action: action_check_jiwa
+
+  - rule: Check Perawatan THT
+    steps:
+      - intent: Check_THT
+      - action: action_check_THT
+
+  - rule: Check Perawatan Anak
+    steps:
+      - intent: Check_Anak
+      - action: action_check_anak
+
+  - rule: Check Perawatan Fisioterapi
+    steps:
+      - intent: Check_Fisioterapi
+      - action: action_check_fisioterapi
+
+  - rule: Berkas
+    steps:
+      - intent: Berkas_Pendaftaran
+      - action: utter_Berkas_Pendaftaran

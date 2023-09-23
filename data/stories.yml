@@ -1,0 +1,78 @@
+version: "2.0"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: Perawatan Mata
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Mata
+      - action: utter_Perawatan_Poli_Mata
+
+  - story: Perawatan Gigi
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Gigi
+      - action: utter_Perawatan_Poli_Gigi
+
+  - story: Perawatan THT
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_THT
+      - action: utter_Perawatan_Poli_THT
+
+  - story: Perawatan Jiwa
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Jiwa
+      - action: utter_Perawatan_Poli_Jiwa
+
+  - story: Perawatan Penyakit Dalam
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Penyakit_Dalam
+      - action: utter_Perawatan_Poli_Penyakit_Dalam
+
+  - story: Perawatan Anak
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Anak
+      - action: utter_Perawatan_Poli_Anak
+
+  - story: Perawatan Fisioterapi
+    steps:
+      - intent: Poliklinik
+      - action: utter_Poliklinik
+      - intent: Perawatan_Poli_Fisioterapi
+      - action: utter_Perawatan_Poli_Fisioterapi
